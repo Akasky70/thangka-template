@@ -1,0 +1,16 @@
+@import './colors.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+img {
+  display: block;
+}

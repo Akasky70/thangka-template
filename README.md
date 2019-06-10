@@ -1,1 +1,1 @@
-# thangka-template
+# just a template
