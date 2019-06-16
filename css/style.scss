@@ -1,16 +1,44 @@
 @import './colors.scss';
+@import './common.scss';
 
-* {
-  padding: 0;
-  margin: 0;
-}
+.masonry-gallery {
+  // background: $masonryGalleryBg;
+  width: 80%;
+  margin: 100px auto;
 
-.clearfix::after {
-  content: '';
-  clear: both;
-  display: table;
-}
+  .masonry-pattern-1 {
+    width: 50%;
+    height: 0;
+    padding: 5px 5px 0 5px;
+    padding-bottom: 30%;
+    overflow: hidden;
+    float: left;
 
-img {
-  display: block;
+    img {
+      width: 100%;
+    }
+  }
+
+  .masonry-pattern-2 {
+    width: 25%;
+    height: 0;
+    padding: 5px;
+    padding-bottom: 25%;
+    overflow: hidden;
+    float: left;
+    margin-bottom: 5px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .balance-height {
+    margin-top: -25%;
+    padding: 0 5px 25% 5px;
+  }
+
+  img {
+    border: 1px solid rgb(75, 75, 75);
+  }
 }

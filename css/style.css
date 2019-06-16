@@ -1,6 +1,14 @@
-* {
-  padding: 0;
+*,
+*:after,
+*:before {
   margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: lightgray;
 }
 
 .clearfix::after {
@@ -11,5 +19,54 @@
 
 img {
   display: block;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.masonry-gallery {
+  width: 80%;
+  margin: 100px auto;
+}
+
+.masonry-gallery .masonry-pattern-1 {
+  width: 50%;
+  height: 0;
+  padding: 5px 5px 0 5px;
+  padding-bottom: 30%;
+  overflow: hidden;
+  float: left;
+}
+
+.masonry-gallery .masonry-pattern-1 img {
+  width: 100%;
+}
+
+.masonry-gallery .masonry-pattern-2 {
+  width: 25%;
+  height: 0;
+  padding: 5px;
+  padding-bottom: 25%;
+  overflow: hidden;
+  float: left;
+  margin-bottom: 5px;
+}
+
+.masonry-gallery .masonry-pattern-2 img {
+  width: 100%;
+}
+
+.masonry-gallery .balance-height {
+  margin-top: -25%;
+  padding: 0 5px 25% 5px;
+}
+
+.masonry-gallery img {
+  border: 1px solid #4b4b4b;
 }
 /*# sourceMappingURL=style.css.map */
