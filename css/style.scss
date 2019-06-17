@@ -1,10 +1,17 @@
 @import './colors.scss';
 @import './common.scss';
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap');
+
+@mixin masonry-img-transistion {
+  transition: width 0.5s;
+  -webkit-transition: width 0.5s;
+}
 
 .masonry-gallery {
   // background: $masonryGalleryBg;
   width: 80%;
-  margin: 100px auto;
+  margin: 50px auto;
 
   .masonry-pattern-1 {
     width: 50%;
@@ -13,9 +20,15 @@
     padding-bottom: 30%;
     overflow: hidden;
     float: left;
+    @include masonry-img-transistion;
 
     img {
       width: 100%;
+    }
+
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+      padding-bottom: 80%;
     }
   }
 
@@ -27,9 +40,15 @@
     overflow: hidden;
     float: left;
     margin-bottom: 5px;
+    @include masonry-img-transistion;
 
     img {
       width: 100%;
+    }
+
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+      padding-bottom: 80%;
     }
   }
 
@@ -37,8 +56,51 @@
     margin-top: -25%;
     padding: 0 5px 25% 5px;
   }
+}
 
-  img {
-    border: 1px solid rgb(75, 75, 75);
+header {
+  width: 80%;
+  margin: auto;
+
+  .logo-wrapper {
+    width: 100%;
+
+    .logo {
+      width: fit-content;
+      margin: 30px auto 10px auto;
+      border-radius: 50%;
+      font-family: 'Great Vibes', cursive;
+      color: $logoTextColor;
+      font-size: 60px;
+    }
+  }
+
+  nav {
+    width: 100%;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+
+    .navbar {
+      width: fit-content;
+      margin: auto;
+      list-style-type: none;
+
+      li {
+        float: left;
+
+        a {
+          display: block;
+          padding: 10px 20px;
+          text-decoration: none;
+          color: $menuTextColor;
+          font-family: 'Architects Daughter', cursive;
+
+          &:hover {
+            color: $menuHovercolor;
+            background: $menuHoverBg;
+          }
+        }
+      }
+    }
   }
 }
