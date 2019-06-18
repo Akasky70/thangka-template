@@ -1,11 +1,41 @@
-@import './colors.scss';
+@import './constant.scss';
 @import './common.scss';
 @import url('https://fonts.googleapis.com/css?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:500&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap');
 
 @mixin masonry-img-transistion {
   transition: width 0.5s;
   -webkit-transition: width 0.5s;
+}
+
+@mixin masnory-flip-btm {
+  position: absolute;
+  right: 15px;
+  left: 15px;
+  bottom: 10px;
+  top: 15px;
+  background-color: rgba(255, 255, 255, 0.781);
+  padding: 15px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateX(90deg);
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: perspective(300px) rotateX(90deg);
+  -o-transform: rotateX(90deg);
+  transform-origin: 50% 100% 0;
+  -webkit-transition: 0.5s;
+  text-align: center;
+}
+
+@mixin masnory-flip-btm-hover {
+  -webkit-transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -o-transform: rotateX(0deg);
 }
 
 .masonry-gallery {
@@ -14,16 +44,36 @@
   margin: 50px auto;
 
   .masonry-pattern-1 {
+    position: relative;
     width: 50%;
     height: 0;
     padding: 5px 5px 0 5px;
     padding-bottom: 30%;
     overflow: hidden;
     float: left;
+    cursor: pointer;
     @include masonry-img-transistion;
 
     img {
       width: 100%;
+    }
+
+    .flip-btm {
+      @include masnory-flip-btm;
+
+      h3 {
+        margin-top: 20%;
+        font-family: $mansoryTitleFont;
+        font-size: $mansoryTitleFontSize;
+
+        span {
+          display: block;
+        }
+      }
+    }
+
+    &:hover .flip-btm {
+      @include masnory-flip-btm-hover;
     }
 
     @media only screen and (max-width: 600px) {
@@ -40,10 +90,30 @@
     overflow: hidden;
     float: left;
     margin-bottom: 5px;
+    position: relative;
+    cursor: pointer;
     @include masonry-img-transistion;
 
     img {
       width: 100%;
+    }
+
+    .flip-btm {
+      @include masnory-flip-btm;
+
+      h3 {
+        margin-top: 20%;
+        font-family: $mansoryTitleFont;
+        font-size: $mansoryTitleFontSize;
+
+        span {
+          display: block;
+        }
+      }
+    }
+
+    &:hover .flip-btm {
+      @include masnory-flip-btm-hover;
     }
 
     @media only screen and (max-width: 600px) {
@@ -55,6 +125,11 @@
   .balance-height {
     margin-top: -25%;
     padding: 0 5px 25% 5px;
+
+    @media only screen and (max-width: 600px) {
+      margin-top: 0;
+      padding: 0 5px 80% 5px;
+    }
   }
 }
 
@@ -102,5 +177,19 @@ header {
         }
       }
     }
+  }
+}
+
+button {
+  border: 2px solid black;
+  background: white;
+  padding: 5px 20px;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid black;
+    background: black;
+    color: white;
   }
 }

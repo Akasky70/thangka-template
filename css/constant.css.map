@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "colors.scss"
+        "constant.scss"
     ],
     "names": [],
-    "file": "colors.css"
+    "file": "constant.css"
 }
