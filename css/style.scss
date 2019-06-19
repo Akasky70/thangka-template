@@ -40,7 +40,7 @@
 
 .masonry-gallery {
   // background: $masonryGalleryBg;
-  width: 80%;
+  width: 100%;
   margin: 50px auto;
 
   .masonry-pattern-1 {
@@ -134,7 +134,7 @@
 }
 
 header {
-  width: 80%;
+  width: 100%;
   margin: auto;
 
   .logo-wrapper {
@@ -181,7 +181,7 @@ header {
 }
 
 footer {
-  width: 80%;
+  width: 100%;
   margin: 10px auto;
 
   .inner-footer {
@@ -206,5 +206,44 @@ footer {
         font-family: 'Architects Daughter', cursive;
       }
     }
+  }
+}
+
+.social-media {
+  padding: 10px;
+  width: fit-content;
+  margin: auto;
+
+  i {
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+
+  .fa-facebook-square {
+    &:hover {
+      color: #3578e5;
+    }
+  }
+
+  .fa-instagram {
+    &:hover {
+      color: #f77737;
+    }
+  }
+
+  .fa-twitter-square {
+    &:hover {
+      color: rgba(29, 161, 242, 1);
+    }
+  }
+}
+
+.product-wrapper {
+  padding: 5px;
+
+  .product {
+    background: rgb(216, 216, 216);
+    padding: 20%;
+    text-align: center;
   }
 }
