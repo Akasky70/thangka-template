@@ -30,10 +30,30 @@ img {
   float: right;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-danger {
+  color: rgb(218, 38, 38);
+}
+
+.text-success {
+  color: rgb(8, 194, 79);
+}
+
+.text-info {
+  color: #3097d1;
+}
+
+.full-width {
+  width: 100%;
+}
+
 button {
   border: 2px solid black;
   background: white;
-  padding: 5px 20px;
+  padding: 8px 20px;
   font-weight: bold;
   cursor: pointer;
 
@@ -164,4 +184,22 @@ button {
 
 .padding-15 {
   padding: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .padding-0 {
+    padding: 0px;
+  }
+
+  .padding-5 {
+    padding: 5px;
+  }
+
+  .padding-10 {
+    padding: 5px;
+  }
+
+  .padding-15 {
+    padding: 5px;
+  }
 }

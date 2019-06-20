@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Great+Vibes&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:500&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap");
@@ -11,7 +12,7 @@
 }
 
 body {
-  background: white;
+  background: #f5f5f5;
 }
 
 .clearfix::after {
@@ -32,10 +33,30 @@ img {
   float: right;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-danger {
+  color: #da2626;
+}
+
+.text-success {
+  color: #08c24f;
+}
+
+.text-info {
+  color: #3097d1;
+}
+
+.full-width {
+  width: 100%;
+}
+
 button {
   border: 2px solid black;
   background: white;
-  padding: 5px 20px;
+  padding: 8px 20px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -167,6 +188,21 @@ button:hover {
 
 .padding-15 {
   padding: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .padding-0 {
+    padding: 0px;
+  }
+  .padding-5 {
+    padding: 5px;
+  }
+  .padding-10 {
+    padding: 5px;
+  }
+  .padding-15 {
+    padding: 5px;
+  }
 }
 
 .masonry-gallery {
@@ -417,12 +453,87 @@ footer .inner-footer .contact-section p {
 }
 
 .product-wrapper {
-  padding: 5px;
+  padding: 15px;
 }
 
 .product-wrapper .product {
-  background: #d8d8d8;
-  padding: 20%;
+  padding: 0%;
   text-align: center;
+  background: transparent;
+}
+
+.product-wrapper .product .product-img-wrapper {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.product-wrapper .product .product-img-wrapper img {
+  width: 100%;
+  opacity: 0.95;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+  -webkit-transform: scale3d(1.05, 1.05, 1);
+  transform: scale3d(1.05, 1.05, 1);
+}
+
+.product-wrapper .product .product-info {
+  padding: 10px;
+}
+
+.product-wrapper .product .product-info h2 {
+  margin: 6px 0;
+  text-align: left;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.product-wrapper .product .product-info p {
+  margin: 3px 0;
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+.product-wrapper .product .product-info .discount-price {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.product-wrapper .product .product-info button {
+  visibility: hidden;
+  margin-top: 10px;
+}
+
+.product-wrapper .product:hover {
+  cursor: pointer;
+  background: white;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.185);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.185);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.product-wrapper .product:hover button {
+  visibility: visible;
+}
+
+.product-wrapper .product:hover .product-img-wrapper img {
+  opacity: 0.6;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+
+.headings h2 {
+  font-size: 30px;
+  font-weight: normal;
+  font-family: 'Great Vibes', cursive;
+}
+
+.headings .border-botom {
+  border-bottom: 2px solid black;
 }
 /*# sourceMappingURL=style.css.map */
