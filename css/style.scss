@@ -39,10 +39,37 @@
   -o-transform: rotateX(0deg);
 }
 
+@mixin inline-title {
+  .inline-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    text-shadow: 0px 0px 8px black;
+    color: white;
+
+    h3 {
+      font-weight: normal;
+      font-family: $mansoryTitleFont;
+      font-size: $mansoryTitleFontSize;
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  &:hover .inline-title {
+    visibility: hidden;
+    transition: all 0.2s ease-out;
+  }
+}
+
 .masonry-gallery {
   // background: $masonryGalleryBg;
   width: 100%;
-  margin: 50px auto;
+  margin: 0 auto 50px auto;
 
   .masonry-pattern-1 {
     position: relative;
@@ -64,6 +91,7 @@
 
       h3 {
         margin-top: 20%;
+        font-weight: normal;
         font-family: $mansoryTitleFont;
         font-size: $mansoryTitleFontSize;
 
@@ -72,6 +100,8 @@
         }
       }
     }
+
+    @include inline-title;
 
     &:hover .flip-btm {
       @include masnory-flip-btm-hover;
@@ -103,6 +133,7 @@
       @include masnory-flip-btm;
 
       h3 {
+        font-weight: normal;
         margin-top: 20%;
         font-family: $mansoryTitleFont;
         font-size: $mansoryTitleFontSize;
@@ -112,6 +143,8 @@
         }
       }
     }
+
+    @include inline-title;
 
     &:hover .flip-btm {
       @include masnory-flip-btm-hover;
@@ -269,6 +302,7 @@ footer {
         margin: 6px 0;
         text-align: left;
         font-size: 16px;
+        font-weight: normal;
         font-family: 'Roboto', sans-serif;
       }
 
@@ -276,7 +310,7 @@ footer {
         margin: 3px 0;
         text-align: left;
         font-size: 18px;
-        font-weight: bold;
+        font-weight: normal;
         font-family: 'Roboto', sans-serif;
       }
 
@@ -296,6 +330,7 @@ footer {
       background: white;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.185);
       transition: all 0.2s ease-out;
+
       button {
         visibility: visible;
       }
@@ -320,5 +355,15 @@ footer {
 
   .border-botom {
     border-bottom: 2px solid black;
+  }
+
+  .line {
+    display: block;
+    margin-top: 20px;
+    border-bottom: 2px solid black;
+
+    @media only screen and (max-width: 600px) {
+      margin-top: 0;
+    }
   }
 }

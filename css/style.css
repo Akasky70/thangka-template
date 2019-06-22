@@ -207,7 +207,7 @@ button:hover {
 
 .masonry-gallery {
   width: 100%;
-  margin: 50px auto;
+  margin: 0 auto 50px auto;
 }
 
 .masonry-gallery .masonry-pattern-1 {
@@ -249,12 +249,39 @@ button:hover {
 
 .masonry-gallery .masonry-pattern-1 .flip-btm h3 {
   margin-top: 20%;
+  font-weight: normal;
   font-family: "Poppins", sans-serif;
   font-size: 1.25rem;
 }
 
 .masonry-gallery .masonry-pattern-1 .flip-btm h3 span {
   display: block;
+}
+
+.masonry-gallery .masonry-pattern-1 .inline-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  text-shadow: 0px 0px 8px black;
+  color: white;
+}
+
+.masonry-gallery .masonry-pattern-1 .inline-title h3 {
+  font-weight: normal;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+}
+
+.masonry-gallery .masonry-pattern-1 .inline-title h3 span {
+  display: block;
+}
+
+.masonry-gallery .masonry-pattern-1:hover .inline-title {
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .masonry-gallery .masonry-pattern-1:hover .flip-btm {
@@ -310,6 +337,7 @@ button:hover {
 }
 
 .masonry-gallery .masonry-pattern-2 .flip-btm h3 {
+  font-weight: normal;
   margin-top: 20%;
   font-family: "Poppins", sans-serif;
   font-size: 1.25rem;
@@ -317,6 +345,32 @@ button:hover {
 
 .masonry-gallery .masonry-pattern-2 .flip-btm h3 span {
   display: block;
+}
+
+.masonry-gallery .masonry-pattern-2 .inline-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  text-shadow: 0px 0px 8px black;
+  color: white;
+}
+
+.masonry-gallery .masonry-pattern-2 .inline-title h3 {
+  font-weight: normal;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+}
+
+.masonry-gallery .masonry-pattern-2 .inline-title h3 span {
+  display: block;
+}
+
+.masonry-gallery .masonry-pattern-2:hover .inline-title {
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .masonry-gallery .masonry-pattern-2:hover .flip-btm {
@@ -392,8 +446,8 @@ header nav .navbar li a {
 }
 
 header nav .navbar li a:hover {
-  color: #333333;
-  background: #dbff9b;
+  color: #f5f5f5;
+  background: black;
 }
 
 footer {
@@ -487,6 +541,7 @@ footer .inner-footer .contact-section p {
   margin: 6px 0;
   text-align: left;
   font-size: 16px;
+  font-weight: normal;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -494,7 +549,7 @@ footer .inner-footer .contact-section p {
   margin: 3px 0;
   text-align: left;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: normal;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -535,5 +590,17 @@ footer .inner-footer .contact-section p {
 
 .headings .border-botom {
   border-bottom: 2px solid black;
+}
+
+.headings .line {
+  display: block;
+  margin-top: 20px;
+  border-bottom: 2px solid black;
+}
+
+@media only screen and (max-width: 600px) {
+  .headings .line {
+    margin-top: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
