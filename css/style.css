@@ -626,6 +626,13 @@ footer .inner-footer .contact-section p {
   grid-gap: 15px;
 }
 
+@media only screen and (max-width: 600px) {
+  .categories-block {
+    -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
 .categories-block .category-block {
   position: relative;
   width: 100%;
