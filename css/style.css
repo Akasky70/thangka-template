@@ -554,7 +554,7 @@ footer .inner-footer .contact-section p {
   text-align: left;
   font-size: 16px;
   font-weight: normal;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .product-display-block .product-wrapper .product .product-info p {
@@ -562,7 +562,7 @@ footer .inner-footer .contact-section p {
   text-align: left;
   font-size: 18px;
   font-weight: normal;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .product-display-block .product-wrapper .product .product-info .discount-price {
@@ -636,7 +636,6 @@ footer .inner-footer .contact-section p {
 .categories-block .category-block {
   position: relative;
   width: 100%;
-  background: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -645,6 +644,7 @@ footer .inner-footer .contact-section p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
 }
 
 .categories-block .category-block img {
@@ -659,11 +659,27 @@ footer .inner-footer .contact-section p {
 }
 
 .categories-block .category-block .category-info h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: white;
   text-shadow: 0px 0px 10px black;
   opacity: 0.9;
   font-size: 35px;
   text-align: center;
+}
+
+.categories-block .category-block:hover {
+  opacity: 0.8;
+}
+
+.about-us-block {
+  width: 100%;
+}
+
+.about-us-block p {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-weight: 100;
+  font-size: 16px;
+  color: #2c2c2c;
 }
 /*# sourceMappingURL=style.css.map */
