@@ -476,7 +476,6 @@ footer .inner-footer {
   width: 100%;
   padding: 20px;
   border-top: 2px solid black;
-  border-bottom: 2px solid black;
 }
 
 footer .inner-footer .contact-section {
@@ -635,7 +634,7 @@ footer .inner-footer .contact-section p {
 
 .categories-block {
   width: 100%;
-  padding: 15px;
+  padding: 15px 15px 40px 15px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
@@ -723,6 +722,7 @@ footer .inner-footer .contact-section p {
 
 .about-us-block {
   width: 100%;
+  padding: 20px 40px;
 }
 
 .about-us-block p {
