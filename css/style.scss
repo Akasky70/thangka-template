@@ -1,5 +1,6 @@
 @import './constant.scss';
 @import './common.scss';
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Great+Vibes&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:500&display=swap');
@@ -89,6 +90,12 @@
     .flip-btm {
       @include masnory-flip-btm;
 
+      .discount-price {
+        .text-info {
+          display: inline;
+        }
+      }
+
       h3 {
         margin-top: 20%;
         font-weight: normal;
@@ -97,6 +104,10 @@
 
         span {
           display: block;
+        }
+
+        .current-price {
+          font-size: $mgCurrentPriceSize;
         }
       }
     }
@@ -132,6 +143,12 @@
     .flip-btm {
       @include masnory-flip-btm;
 
+      .discount-price {
+        .text-info {
+          display: inline;
+        }
+      }
+
       h3 {
         font-weight: normal;
         margin-top: 20%;
@@ -140,6 +157,10 @@
 
         span {
           display: block;
+        }
+
+        .current-price {
+          font-size: $mgCurrentPriceSize;
         }
       }
     }
@@ -202,7 +223,7 @@ header {
           padding: 10px 20px;
           text-decoration: none;
           color: $menuTextColor;
-          font-family: 'Architects Daughter', cursive;
+          font-family: $navBarFont;
 
           &:hover {
             color: $menuHovercolor;
@@ -237,7 +258,7 @@ footer {
 
       p {
         font-size: 20px;
-        font-family: 'Architects Daughter', cursive;
+        font-family: $navBarFont;
       }
     }
   }
@@ -395,6 +416,41 @@ footer {
     align-content: center;
     justify-content: center;
     cursor: pointer;
+    overflow: hidden;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 20%;
+      height: 200%;
+      opacity: 0;
+      transform: rotate(38deg);
+
+      background: rgba(255, 255, 255, 0.13);
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.13) 0%,
+        rgba(255, 255, 255, 0.13) 77%,
+        rgba(255, 255, 255, 0.5) 92%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    /* Hover state - trigger effect */
+    &:hover:after {
+      opacity: 1;
+      left: 130%;
+      transition-property: left, top, opacity;
+      transition-duration: 0.7s, 0.7s, 0.15s;
+      transition-timing-function: ease;
+    }
+
+    /* Active state */
+    &:active:after {
+      opacity: 0;
+    }
 
     img {
       width: 100%;
@@ -431,5 +487,6 @@ footer {
     font-weight: 100;
     font-size: 16px;
     color: $regularTextColor;
+    margin: 10px 0;
   }
 }
