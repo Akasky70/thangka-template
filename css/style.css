@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap");
 *,
 *:after,
 *:before {
@@ -621,7 +626,7 @@ footer .inner-footer .contact-section p {
   border-bottom: 2px solid black;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 8ate00px) {
   .headings .line {
     margin-top: 0;
   }
